@@ -17,9 +17,9 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
+                <li><a href="https://www.nytimes.com/interactive/2024/travel/places-to-travel-destinations-2024.html">Destinations</a></li>
                 <li><a href="#">Plan Your Trip</a></li>
-                <li><a href="#">Travel Blog</a></li>
+                <li><a href="https://masterblogging.com/best-travel-blogs/?form=MG0AV3">Travel Blog</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
@@ -32,9 +32,10 @@
         </div>
 
         <div class="page">
-            <div class="place">
-                <h2>Where do you wish to travel?</h2>
-                <input type="text" id="destination" placeholder="Enter the destination" onchange="setDestination()">            </div>
+            <div class="days">
+                <label for="days" class="form-label"><h2>Enter Destination</h2></label>
+                <input type="text" class="form-control" id="days" placeholder="Your Dream Destination" onchange="setDays()">
+            </div>
             <br>
 
             <div class="days">
@@ -45,79 +46,101 @@
             <br>
 
             <h2>What is Your Budget?</h2>
-            <div class="row text-center justify-content-evenly">
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+            <div class="container">
+                <!-- Budget Section -->
+                <div class="section">
+                  <div class="card-container">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Cheap</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Economize and Save</h5>
+                        <button onclick="selectBudget('Cheap')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Economize and Save</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectBudget('Cheap')">Select</button>
-                    </div>
-                </div>
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Moderate</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Balance Cost and Comfort</h5>
+                        <button onclick="selectBudget('Moderate')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Balance Cost and Comfort</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectBudget('Moderate')">Select</button>
-                    </div>
-                </div>
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Luxury</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Indulge without Limits</h5>
+                        <button onclick="selectBudget('Luxury')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Indulge without Limits</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectBudget('Luxury')">Select</button>
-                    </div>
+                  </div>
                 </div>
-            </div>
-
-            <br>
-            <h2>Who are you Travelling with?</h2>
-            <div class="row text-center justify-content-evenly">
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+            
+                <!-- Traveling Companions Section -->
+                <h2>Whom Are You Traveling With?</h2>
+                <div class="section">
+                  <div class="card-container">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Solo</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Discover on Your Own</h5>
+                        <button onclick="selectCompanion('Solo')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Discover on Your Own</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectCompanion('Solo')">Select</button>
-                    </div>
-                </div>
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Partner</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Exploring with a Loved One</h5>
+                        <button onclick="selectCompanion('Partner')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Exploring with a loved one</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectCompanion('Partner')">Select</button>
-                    </div>
-                </div>
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Family</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Fun for All Ages</h5>
+                        <button onclick="selectCompanion('Family')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Fun for all Ages</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectCompanion('Family')">Select</button>
-                    </div>
-                </div>
-                <div class="card col-sm-5 col-md-3 mb-3 me-3">
-                    <div class="card-header">
+                    <div class="card">
+                      <div class="card-header">
                         <h4>Friends</h4>
+                      </div>
+                      <div class="card-body">
+                        <h5>Adventure with Your Crew</h5>
+                        <button onclick="selectCompanion('Friends')">Select</button>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Adventure with Your Crew</h5>
-                        <button type="button" class="btn btn-primary" onclick="selectCompanion('Friends')">Select</button>
-                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
         </div>
     </div>
-    <button type="button" class="btn btn-primary" onclick="generateTrip()">Show me my trip</button>
+    <button type="button" class="submit" onclick="generateTrip()">Show me my trip</button>
+    <footer>
+        <div class="footer-links">
+          <ul>
+            <!-- <li><a href="#">Privacy Policy</a></li> -->
+            <!-- <li><a href="#">Terms of Service</a></li> -->
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          
+        </div>
+      </footer>
 
     <!-- Linking JS -->
     <script src="trip2.js"></script>

@@ -1,0 +1,297 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(bgimage.jpg); 
+}
+/* header */
+/* Ensures the header spans the full width of the screen */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertically align logo and heading */
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    height: 65px;
+    width: 100%; /* Ensures the header takes full width */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+/* Container for the logo and heading */
+header .logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the logo and text */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Vertically align the logo text */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+header .logo img {
+    height: 40px; /* Set a height for the logo */
+    margin-right: 10px; /* Space between logo image and text */
+}
+
+/* Navigation styling */
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ensure container takes up full screen */
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+.logo img{
+    position: absolute;
+    left: 2px;
+    height:5%;
+    top:2%;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+.logo
+/* Ensure container takes up full screen */
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: beige;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+/* Header */
+.header {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+/* Content */
+ .content {
+    padding: 2rem;
+} 
+/* Itinerary Box */
+.itinerary-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+    background: #f9f9f9;
+}
+
+.itinerary-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+#itinerary-output {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .itinerary-box {
+        padding: 1rem;
+    }
+
+    .itinerary-box h2 {
+        font-size: 1.3rem;
+    }
+
+    #itinerary-output {
+        font-size: 0.9rem;
+    }
+}
+/* footer */
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0;
+}
+.container {
+    flex: 1; 
+}
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+footer .footer-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+
+

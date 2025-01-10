@@ -1,66 +1,198 @@
 /* Basic Reset */
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    height: 65px;
-  }
-  
-  header .logo {
-    font-size:24px;
-    font-weight: bold;
-  }
-  
-  header nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  header nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  .logo img{
-    position: absolute;
-    left: 2px;
-    height:5%;
-    top:3%
-  }
-   .place,.days{
-    position:relative;
-    width: 60%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: aliceblue;
+      background-image: url(bgimage.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  height: 65px;
+}
+
+header .logo {
+  font-size:24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.logo img{
+  position: absolute;
+  left: 2px;
+  height:5%;
+  top:2%
+}
+ .place,.days{
+  position:relative;
+  width: 60%;
+} 
+.days{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.main{
+  max-width:1200px;
+  margin: auto;
+  color: white;
+}
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .social-media {
+  margin-top: 20px;
+}
+
+footer .social-media a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-media a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(145deg, #ffffff, #e4e4e4);
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(48, 45, 45, 0.7);
+  width: 260px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(43, 42, 42, 0.8);
+}
+
+/* Card Header */
+.card-header {
+  background: #035a5a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Card Body */
+.card-body h5 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-body button {
+  background: #2d9d9d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body button:hover {
+  background: #9febda;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+.card-body button:active{
+  background-color: #333;
+}
+button:active{
+  background-color: #333;
+}
+.submit { 
+  padding: 10px 20px; 
+  font-size: 24px; 
+  background-color: #035a5a; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap;
+  width: 50%; 
+  max-width: 300px; 
+  margin: 10px auto; 
+} 
+@media (max-width: 768px) {
+   .submit {
+     width: 70%; 
+     font-size: 20px; }
+     } 
+@media (max-width: 480px) { 
+  .submit { 
+    width: 90%; font-size: 16px; 
   } 
-  .days{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .main{
-    max-width:1200px;
-    margin: auto;
-  }
-  button{
-    color: white;
-    background-color: blue;
-    font-weight: 500;
-  }
-    /*-----------------------------------------*/
-   
-  nav a:hover {
-    color: #007bff;
-  }
+}
