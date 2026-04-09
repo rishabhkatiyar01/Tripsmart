@@ -10,18 +10,18 @@
 //     }
 //     getOutput();
 
-    // if (tripPrompt) {
-    //     // Display the prompt
-    //     document.getElementById("trip-details").textContent = `Prompt: ${tripPrompt}`;
+//     if (tripPrompt) {
+//         // Display the prompt
+//         document.getElementById("trip-details").textContent = `Prompt: ${tripPrompt}`;
 
-    //     // Optional: Use the prompt to call the API
-    //     // Example:
-    //     // callGeminiAPI(tripPrompt).then(response => {
-    //     //     document.getElementById("trip-details").innerHTML = response;
-    //     // });
-    // } else {
-    //     document.getElementById("trip-details").textContent = "No trip details found.";
-    // }
+//         // Optional: Use the prompt to call the API
+//         // Example:
+//         // callGeminiAPI(tripPrompt).then(response => {
+//         //     document.getElementById("trip-details").innerHTML = response;
+//         // });
+//     } else {
+//         document.getElementById("trip-details").textContent = "No trip details found.";
+//     }
 // });
 const output = localStorage.getItem("output");
 
